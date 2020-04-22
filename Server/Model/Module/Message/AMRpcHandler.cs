@@ -2,10 +2,21 @@
 
 namespace ETModel
 {
+    /// <summary>
+    /// MARK:通过where类型约束来声明泛型Request和Response为IRequest和IResponse的接口实现类
+    /// </summary>
+    /// <typeparam name="Request"></typeparam>
+    /// <typeparam name="Response"></typeparam>
 	public abstract class AMRpcHandler<Request, Response>: IMHandler where Request : class, IRequest where Response : class, IResponse 
 	{
 		protected abstract ETTask Run(Session session, Request request, Response response, Action reply);
 
+        /// <summary>
+        /// Rpc调用处理
+        /// </summary>
+        /// <param name="session">会话的抽象，Entity的一种</param>
+        /// <param name="message">IRequest的实现类</param>
+        /// <returns></returns>
 		public async ETVoid Handle(Session session, object message)
 		{
 			try

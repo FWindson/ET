@@ -6,6 +6,7 @@ namespace ETHotfix
 	{
 		public void Dispatch(Session session, ushort opcode, object message)
 		{
+			Log.Info($"InnerMessageDispatcher收到消息，Session is {session}, opcode is {opcode}, message is {JsonHelper.ToJson(message)}");
 			// 收到actor消息,放入actor队列
 			switch (message)
 			{

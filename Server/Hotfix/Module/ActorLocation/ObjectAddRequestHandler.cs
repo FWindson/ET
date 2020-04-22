@@ -8,6 +8,7 @@ namespace ETHotfix
 	{
 		protected override async ETTask Run(Session session, ObjectAddRequest request, ObjectAddResponse response, Action reply)
 		{
+			Log.Info($"ObjectAddRequest.Run(), Session={session},request={JsonHelper.ToJson(request)},ObjectAddResponse={JsonHelper.ToJson(response)}");
 			Game.Scene.GetComponent<LocationComponent>().Add(request.Key, request.InstanceId);
 			reply();
 		}

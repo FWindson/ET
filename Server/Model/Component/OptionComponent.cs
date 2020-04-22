@@ -11,7 +11,11 @@ namespace ETModel
 			self.Awake(a);
 		}
 	}
-	
+
+	/// <summary>
+	/// 通过该组件能获取服务的appId，appType和config
+	/// config默认是../Config/StartConfig/LocalAllServer.txt
+	/// </summary>
 	public class OptionComponent : Component
 	{
 		public Options Options { get; set; }

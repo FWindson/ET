@@ -5,6 +5,14 @@ using Path = System.IO.Path;
 
 namespace ETModel
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="exe">命令行程序名，例如dotnet</param>
+    /// <param name="arguments">命令行参数</param>
+    /// <param name="workingDirectory"></param>
+    /// <param name="waitExit"></param>
+    /// <returns></returns>
     public static class ProcessHelper
     {
         public static Process Run(string exe, string arguments, string workingDirectory = ".", bool waitExit = false)

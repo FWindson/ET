@@ -47,6 +47,9 @@ namespace ETModel
 		}
 	}
 
+    /// <summary>
+    /// 存储
+    /// </summary>
 	public class LocationComponent : Component
 	{
 		private readonly Dictionary<long, long> locations = new Dictionary<long, long>();

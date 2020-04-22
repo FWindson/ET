@@ -4,6 +4,9 @@ using System.Runtime.CompilerServices;
 
 namespace ETModel
 {
+    /// <summary>
+    /// MARK:定义异步操作返回值类型
+    /// </summary>
     [AsyncMethodBuilder(typeof(AsyncETVoidMethodBuilder))]
     public struct ETVoid
     {

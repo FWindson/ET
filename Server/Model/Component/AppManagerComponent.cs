@@ -47,6 +47,7 @@ namespace ETModel
 		private void StartProcess(int appId)
 		{
 			OptionComponent optionComponent = Game.Scene.GetComponent<OptionComponent>();
+			//拿出StartConfig组件实例（单例）
 			StartConfigComponent startConfigComponent = StartConfigComponent.Instance;
 			string configFile = optionComponent.Options.Config;
 			StartConfig startConfig = startConfigComponent.Get(appId);
@@ -54,6 +55,7 @@ namespace ETModel
 			string arguments = $"App.dll --appId={startConfig.AppId} --appType={startConfig.AppType} --config={configFile}";
 
 			Log.Info($"{exe} {arguments}");
+			//MARK:启动控制台进程
 			try
 			{
 				Process process = ProcessHelper.Run(exe, arguments);

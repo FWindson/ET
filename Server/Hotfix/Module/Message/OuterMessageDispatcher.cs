@@ -11,6 +11,7 @@ namespace ETHotfix
 		
 		public async ETVoid DispatchAsync(Session session, ushort opcode, object message)
 		{
+			Log.Info($"OuterMessageDispatcher收到消息，Session is {session}, opcode is {opcode}, message is {JsonHelper.ToJson(message)}");
 			// 根据消息接口判断是不是Actor消息，不同的接口做不同的处理
 			switch (message)
 			{

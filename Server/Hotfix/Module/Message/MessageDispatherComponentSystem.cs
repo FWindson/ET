@@ -78,6 +78,7 @@ namespace ETHotfix
 
 		public static void Handle(this MessageDispatcherComponent self, Session session, MessageInfo messageInfo)
 		{
+			Log.Info($"MessageDispatcherComponentHelper.Handle()：MessageDispatcherComponent is {self}, Session is session {session}, MessageInfo is {JsonHelper.ToJson(messageInfo)}");
 			List<IMHandler> actions;
 			if (!self.Handlers.TryGetValue(messageInfo.Opcode, out actions))
 			{
