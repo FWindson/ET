@@ -14,7 +14,10 @@ namespace ETHotfix
 			self.Awake();
 		}
 	}
-	
+
+    /// <summary>
+    /// 登陆界面UI组件
+    /// </summary>
 	public class UILoginComponent: Component
 	{
 		private GameObject account;

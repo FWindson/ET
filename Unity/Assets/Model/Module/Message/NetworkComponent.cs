@@ -5,6 +5,10 @@ using System.Net;
 
 namespace ETModel
 {
+	/// <summary>
+	/// ET网络组件
+	/// 通过该组件可以创建与服务器的会话，用于保持与服务器的长连接
+	/// </summary>
 	public abstract class NetworkComponent : Component
 	{
 		public AppType AppType;

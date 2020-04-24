@@ -19,6 +19,9 @@ namespace ETModel
 		}
 	}
 
+	/// <summary>
+	/// 用于异步方法的延时堵塞
+	/// </summary>
 	public class TimerComponent : Component
 	{
 		private readonly Dictionary<long, Timer> timers = new Dictionary<long, Timer>();

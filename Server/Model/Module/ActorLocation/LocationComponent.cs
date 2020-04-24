@@ -47,9 +47,10 @@ namespace ETModel
 		}
 	}
 
-    /// <summary>
-    /// 存储
-    /// </summary>
+    ///<summary>
+    ///存储服务器地址实例ID的组件
+    ///通过KEY值可拿出服务器的实例ID
+    ///</summary>
 	public class LocationComponent : Component
 	{
 		private readonly Dictionary<long, long> locations = new Dictionary<long, long>();

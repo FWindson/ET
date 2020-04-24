@@ -37,7 +37,8 @@ namespace ETHotfix
 
 				UnitConfig unitConfig = (UnitConfig)Game.Scene.GetComponent<ConfigComponent>().Get(typeof(UnitConfig), 1001);
 				Log.Debug($"config {JsonHelper.ToJson(unitConfig)}");
-
+				
+				//运行特性[Event(EventIdType.InitSceneStart)]标记的类的Run方法
 				Game.EventSystem.Run(EventIdType.InitSceneStart);
 			}
 			catch (Exception e)

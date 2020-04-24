@@ -2,6 +2,9 @@
 
 namespace ETHotfix
 {
+	/// <summary>
+	/// 初始化场景事件
+	/// </summary>
 	[Event(EventIdType.InitSceneStart)]
 	public class InitSceneStart_CreateLoginUI: AEvent
 	{

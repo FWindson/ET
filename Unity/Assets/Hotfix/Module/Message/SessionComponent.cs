@@ -11,6 +11,10 @@ namespace ETHotfix
 		}
 	}
 
+	/// <summary>
+	/// 会话管理组件
+	/// 用于存储当前客户端与服务端的会话
+	/// </summary>
 	public class SessionComponent: Component
 	{
 		public static SessionComponent Instance;

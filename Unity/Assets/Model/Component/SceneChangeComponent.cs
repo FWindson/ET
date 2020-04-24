@@ -14,7 +14,10 @@ namespace ETModel
 			}
 		}
 	}
-
+	
+	/// <summary>
+	/// 场景切换管理组件
+	/// </summary>
 	public class SceneChangeComponent: Component
 	{
 		public AsyncOperation loadMapOperation;

@@ -56,6 +56,7 @@ namespace ETHotfix
 				this.types.Add(type);	
 			}
 			
+			//通过ObjectSystemAttribute获取所有的System的类定义并实例化，之后根据该System的类型进行逻辑上的处理
 			foreach (Type type in types)
 			{
 				object[] attrs = type.GetCustomAttributes(typeof(ObjectSystemAttribute), false);
@@ -96,6 +97,8 @@ namespace ETHotfix
 				}
 			}
 
+			//实例化所有通过EventAttribute特性标记的类，并存储到allEvents里备用
+			//外部通过EventSystem.Run(EventIdType)来触发事件
 			this.allEvents.Clear();
 			foreach (Type type in types)
 			{

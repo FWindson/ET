@@ -2,6 +2,9 @@
 
 namespace ETHotfix
 {
+	/// <summary>
+	/// 登陆结束事件
+	/// </summary>
 	[Event(EventIdType.LoginFinish)]
 	public class LoginFinish_CreateLobbyUI: AEvent
 	{

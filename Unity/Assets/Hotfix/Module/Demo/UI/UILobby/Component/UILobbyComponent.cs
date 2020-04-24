@@ -30,6 +30,7 @@ namespace ETHotfix
 
 		private void EnterMap()
 		{
+			//TODO: 这个Coroutine是个空的方法，用来干什么？
 			MapHelper.EnterMapAsync().Coroutine();
 		}
 		
